@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'analytics/index'
+  root 'home#index'
+  get 'home/index'
   mount ActionCable.server => '/cable'
 
   resources :analytics, only: :index
